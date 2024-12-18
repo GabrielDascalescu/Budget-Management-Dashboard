@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ExpenseTracker.js" defer></script> 
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker and Account Balance</h1>
+        <div class="balance-expense-container">
+            <div class="account-balance-box">
+                <h2>Account Balance: $<span id="accountBalance">0.00</span></h2>
+                <form id="balanceForm">
+                    <div class="input-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount" step="any" min="0" required>
+                    </div>
+                    <button type="button" id="depositBtn">Deposit</button>
+                    <button type="button" id="withdrawBtn">Withdraw</button>
+                </form>
+                <h2>Expenses List</h2>
+                <p>Total Expenses: $<span id="totalAmount">0.00</span></p>
+                <ul id="expenseList"></ul>
+            </div>
+            <div class="expenses-box">
+                <form id="expenseForm">
+                    <h2>Expenses</h2>
+                    <div class="input-group">
+                        <label for="expenseName">Expense Name</label>
+                        <input type="text" id="expenseName" placeholder="Enter expense name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="expenseAmount">Amount</label>
+                        <input type="number" id="expenseAmount" placeholder="Enter amount" step="any" min="0" pattern="\d+(\.\d{1,2})?" required>
+                    </div>
+
+                    <button type="button" id="addExpenseBtn">Add Expense</button>
+                </form>
+                <h2>Expense PieChart</h2>
+                <canvas id="expenseChart"></canvas>
+            </div>
+        </div>
+        <div class="forgot-container">
+            <a href = "main.html">Go back to main page</a>
+        </div>
+    </div>
+</body>
+</html>

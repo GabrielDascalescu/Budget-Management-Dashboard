@@ -1,0 +1,13 @@
+composer-setup.php
+
+composer.json
+
+composer.lock
+
+composer.phar
+
+vendor/
+
+node_modules/
+
+*.log
